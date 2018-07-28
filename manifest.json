@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "AEM Chrome Extention",
+  "description": "This is the custom Switcher for AEM instances.",
+  "version": "0.2",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+    "background": {
+    "page": "background.html"
+  },
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
