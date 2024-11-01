@@ -1,98 +1,119 @@
 <!DOCTYPE html>
 <html>
 <style>
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
 
-div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
 
-body{
-	    max-width: 400px;
-    margin: auto;
-}
+    body {
+        max-width: 400px;
+        margin: auto;
+    }
 </style>
+
 <body>
 
-<h3>AEM URL Updater </h3>
+    <h3>AEM URL Updater </h3>
 
-<div>
+    <div>
 
-    <label for="openInNewTab"> Open Pages in new tab </label>
-    <input id="openInNewTab" type="checkbox">
-    <br><br>
+        <label for="openInNewTab"> Open Pages in new tab </label>
+        <input id="openInNewTab" type="checkbox">
+        <br><br>
 
-    <label for="authorURL">Author URL</label>
-    <input type="text" id="authorURL" placeholder="http://localhost:4502">
+        <label for="authorURL">Author URL</label>
+        <input type="text" id="authorURL" placeholder="https://author-p80902-e698709.adobeaemcloud.com">
 
-    <label for="publishURL">Publish URL</label>
-    <input type="text" id="publishURL"  placeholder="http://localhost:4503">
+        <label for="publishURL">Publish URL</label>
+        <input type="text" id="publishURL" placeholder="https://publish-p80902-e698709.adobeaemcloud.com">
 
-    <label for="liveURL">Live URL</label>
-    <input type="text" id="liveURL"  placeholder="https://www.example.com">
-    
-    <label for="sitesRootPath">Sites Root Path</label>
-    <input type="text" id="siteRootPath"  placeholder="/content/aem-ninja">
+        <label for="liveURL">Live URL</label>
+        <input type="text" id="liveURL" placeholder="https://www.esri.com">
 
-    <label for="languageMastersPath">Language Masters Path </label>
-    <input type="text" id="languagemastersPath"  placeholder="/content/aem-ninja/language-masters/en">
+        <label for="previewURL">Preview URL</label>
+        <input type="text" id="previewUrl" placeholder="https://preview.esri.com">
 
-    <label for="languagePath">Language Path </label>
-    <input type="text" id="languagePath"  placeholder="/content/aem-ninja/en-us">
+        <label for="sitesRootPath">Sites Root Path</label>
+        <input type="text" id="siteRootPath" placeholder="/content/esri-sites">
 
-    <label for="languagecodelength">Language Code length</label>
-    <select id="languagecodelength">
-      <option value="2">2</option>
-      <option value="4">4</option>
-      <option value="0">0</option>
-    </select>
+        <label for="languageMastersPath">Language Masters Path </label>
+        <input type="text" id="languagemastersPath" placeholder="/content/esri-sites/language-masters/en">
 
-    <hr>
-    <label for="showStage"> Show Stage options</label>
-    <input id="showStage" type="checkbox">
-    <br><br>
+        <label for="languagePath">Language Path </label>
+        <input type="text" id="languagePath" placeholder="/content/esri-sites/en-us">
 
-    <span id="stage" class=" hidden">
-    <label for="stageAuthorURL">Stage Author URL</label>
-    <input type="text" id="stageAuthorURL" placeholder="http://localhost:4502">
+        <label for="languagecodelength">Language Code length</label>
+        <select id="languagecodelength">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="0">0</option>
+        </select>
 
-    <label for="stagePublishURL">Stage Publish URL</label>
-    <input type="text" id="stagePublishURL"  placeholder="http://localhost:4503"> 
+        <br><br>
+        <hr>
+        <label for="showAssetShare"> Show Asset Share </label>
+        <input id="showAssetShare" type="checkbox">
+        <br><br>
 
-    <label for="stageLiveURL">Stage Live URL</label>
-    <input type="text" id="stageLiveURL"  placeholder="https://stage.example.com">  
-    </span> 
-    
-    <div id="status"></div>
-    <button id="save">Save</button>
+        <span id="assets" class="hidden">
+            <label for="assetshareURL">Assets Share URL</label>
+            <input type="text" id="assetshareURL" placeholder="https://assets.esri.com">
+            <label for="dynamicMediaURL">Dynamic Media URL</label>
+            <input type="text" id="dynamicMediaURL" placeholder="https://esri-h.assetsadobe.com/is/image">
+            <label for="brandportalURL">Brandportal URL</label>
+            <input type="text" id="brandportalURL" placeholder="https://esri.brand-portal.adobe.com">
+        </span>
 
-</div>
-<script src="options.js"></script>
+        <hr>
+        <label for="showStage"> Show Stage options</label>
+        <input id="showStage" type="checkbox">
+        <br><br>
+
+        <span id="stage" class=" hidden">
+            <label for="stageAuthorURL">Stage Author URL</label>
+            <input type="text" id="stageAuthorURL" placeholder="https://author-p80902-e698665.adobeaemcloud.com">
+
+            <label for="stagePublishURL">Stage Publish URL</label>
+            <input type="text" id="stagePublishURL" placeholder="https://publish-p80902-e698665.adobeaemcloud.com">
+
+            <label for="stageLiveURL">Stage Live URL</label>
+            <input type="text" id="stageLiveURL" placeholder="https://uat.esri.com">
+        </span>
+
+        <div id="status"></div>
+        <button id="save">Save</button>
+
+    </div>
+    <script src="options.js"></script>
 
 </body>
+
 </html>

@@ -11,6 +11,7 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: .1px;
+  vertical-align:middle
 }
 
 .button span {
@@ -49,24 +50,4 @@
 
 .hidden{
   display:none;
-}
-
-body {
-  margin: 0px;
-  white-space: nowrap;
-}
-
-h1 {
-  font-size: 15px;
-}
-
-#container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-#dropdown {
-  width: 100%;
 }

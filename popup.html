@@ -1,31 +1,67 @@
 <!doctype html>
 
 <html>
-  <head>
+
+<head>
     <title>AEM Switcher by Thilak</title>
     <style type="text/css">
+        body {
+            margin: 10px;
+            white-space: nowrap;
+        }
 
+        h1 {
+            font-size: 15px;
+        }
 
+        #container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #dropdown {
+            width: 100%;
+        }
+
+        body {
+            margin: 0px;
+        }
     </style>
 
-
-    <script src="popup.js"></script>
     <link rel="stylesheet" href="style.css">
-  </head>
+    <script src="popup.js"></script>
 
-  <body>
-<div id="main" >      
-    <button class="button" id="languagemaster"><span>Author (LM)</span></button>
-    <button class="button" id="author"><span>Author (en-us)</span></button>      
-    <button class="button" id="aspublished"><span>As Published</span></button>    
-    <button class="button" id="publish"><span>Publish</span></button>      
-    <button class="button" id="live"><span>Live</span></button>
-    <button class="button" id="admin"><span>In Admin</span></button>
-</div>
+</head>
 
-<div id="error" class=" hidden">
-       <button class="button" >No Options !</button>  
-</div> 
-    
+<body>
+    <div id="main">
+        <button class="button" id="languagemaster"><span>Author (LM)</span></button>
+        <button class="button" id="author"><span>Author (en-us)</span></button>
+        <button class="button" id="aspublished"><span>As Published</span></button>
+        <button class="button" id="preview"><span>Preview</span></button>
+        <button class="button" id="publish"><span>Publish</span></button>
+        <button class="button" id="live"><span>Live</span></button>
+        <button class="button" id="admin"><span>In Admin</span></button>
+    </div>
+
+    <div id="assets" class=" hidden">
+        <button class="button" id="aemAssets"><span>AEM</span></button>
+        <button class="button" id="brandportal"><span>Brand portal</span></button>
+        <button class="button" id="assetslive"><span>Live</span></button>
+    </div>
+
+    <div id="error" class=" hidden">
+        <button class="button">No Options !!!</button>
+    </div>
+    <div id="notPublished" class=" hidden">
+        <button class="button"> Not Published !</button>
+    </div>
+
+    <div id="test" class=" hidden">
+        <button class="button"> thilak !</button>
+    </div>
 </body>
+
 </html>
