@@ -1,15 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Esri AEM Chrome Extension",
   "description": "This extension is a custom switcher for AEM instances. It can be used with Adobe Experience Manager (AEM) pages, a content management system. You can switch between Authoring mode, Publish mode, and Live versions of the page. Customize the AEM authoring and publishing mode URLs in the extension settings page. Learn more about different environments on the Adobe Experience Manager website.",
-  "version": "1.2.12",
-  "browser_action": {
+  "version": "2.0.0",
+  "action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "options_page": "options.html",
   "background": {
-    "page": "background.html"
+    "service_worker": "background.js"
   },
   "permissions": [
     "activeTab",
